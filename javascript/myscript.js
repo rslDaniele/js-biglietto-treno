@@ -16,18 +16,30 @@ prezzo = chilometri * 0.21 ;
 
 console.log(prezzo);
 
+// calcolo percentuali sconto
+
+var percentuale18 = 20
+
+var percentuale65 = 40
+
+var scontoUnder = (percentuale18 / 100) * prezzo
+
+var scontoOver = (percentuale65 / 100) * prezzo
+
+console.log(scontoUnder, scontoOver)
+
 // calcolo del prezzo
 
 if (eta < 18){
-  prezzo = (prezzo - 2 );
+  prezzo = (prezzo - scontoUnder );
 } else if (eta > 65) {
-  prezzo = (prezzo + 2 );
+  prezzo = (prezzo - scontoOver );
 
 }
 
 console.log(prezzo)
 
 
-
-
 // stampa del prezzo finale
+
+document.getElementById('titolo').InnerHTML = "Ecco il tuo biglietto! Sono " + prezzo
