@@ -42,4 +42,6 @@ console.log(prezzo)
 
 // stampa del prezzo finale
 
-document.getElementById('titolo').InnerHTML = "Ecco il tuo biglietto! Sono " + prezzo
+document.getElementById('titolo').innerHTML = "Grazie per aver viaggiato con noi, il prezzo del biglietto è  " + prezzo + " Euro"
+
+console.log(prezzo)
